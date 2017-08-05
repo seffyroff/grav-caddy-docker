@@ -41,16 +41,14 @@ Access the webui at `http://<your-ip>:2015`, for more information check out [GRA
 
 ## Using the container
 
-+ Shell Access to container when it is running: `docker exec -it grav /bin/bash`
++ Shell Access to container when it is running: `docker exec -it grav /bin/sh`
 
 ## Issues
 
-+ CMS not usable behind reverse proxy.
++ No admin interface yet
 
 ## Changelog
 + **05/08/2017:** Initial Fork from dsavell/grav
 	- Replaced Nginx with Caddy
 	- Changed method of installing Grav to use composer instead of curling the zip
 	- Typo corrections on the README.md
-"# grav-remote-docker" 
-"# grav-caddy-docker" 
