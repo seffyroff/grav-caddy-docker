@@ -48,6 +48,8 @@ Access the webui at `http://<your-ip>:2015`, for more information check out [GRA
 + No admin interface yet
 
 ## Changelog
++ **06/08/2017:** Added :admin tag
+	- container configuration with admin interface installed available with :admin tag
 + **05/08/2017:** Initial Fork from dsavell/grav
 	- Replaced Nginx with Caddy
 	- Changed method of installing Grav to use composer instead of curling the zip
