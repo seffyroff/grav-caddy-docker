@@ -20,14 +20,17 @@ The underlying architecture of Grav is built using well established and best-in-
 
 ## What is seffyroff/grav?
 
-A Docker image with Grav CMS and PHP/Caddy
+A Docker image with Grav CMS and PHP/Caddy.
+
+Two versions of the container exist.  The default image is completely unmodified basic Grav out of the box.  For those looking to get something more functional there's a :admin tagged container which adds the admin interface in.  From there you've got a nice /admin interface to install and extend everything else if the cli isn't your best friend.
 
 ## Container Information
 
 + yobasystems/alpine-caddy:php image
 + fork from dsavell/grav Dockerfile
 + Port 2015 Exposed
-+ No Custom Features
++ No Custom Features by default
++ :admin container available with admin plugin installed
 
 ## Usage
 
@@ -47,7 +50,7 @@ Access the webui at `http://<your-ip>:2015`, for more information check out [GRA
 
 ## Issues
 
-+ No admin interface yet
++ Pondering rebasing so no dependency on upstream image exists
 
 ## Changelog
 + **06/08/2017:** Added :admin tag
