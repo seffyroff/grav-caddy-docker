@@ -5,7 +5,7 @@ networks:
       name: traefik_webgateway
 services:
   grav:
-#      image: seffyroff/grav-caddy-docker
+    image: seffyroff/grav-caddy-docker
     # build:
     #   context: .
     networks: 
