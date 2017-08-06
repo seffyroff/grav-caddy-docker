@@ -2,7 +2,7 @@
 
 ![grav](https://getgrav-grav.netdna-ssl.com/user/pages/media/grav-logo.svg)
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/seffyroff/grav-caddy-docker.svg)](https://hub.docker.com/seffyroff/grav-caddy-docker)
+[![Docker Automated buil](https://img.shields.io/docker/automated/seffyroff/grav-caddy-docker.svg)](https://hub.docker.com/r/seffyroff/grav-caddy-docker)
 
 Grav is a Fast, Simple, and Flexible file-based Web-platform. There is Zero installation required. Although Grav follows principles similar to other flat-file CMS platforms, it has a different design philosophy than most.
 
