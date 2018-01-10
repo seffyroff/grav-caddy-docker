@@ -20,7 +20,7 @@ The underlying architecture of Grav is built using well established and best-in-
 
 A Docker image with Grav CMS and PHP/Caddy.
 
-Two versions of the container exist.  The default image is completely unmodified basic Grav out of the box.  For those looking to get something more functional there's a :admin tagged container which adds the admin interface in.  From there you've got a nice /admin interface to install and extend everything else if the cli isn't your best friend.
+Overhauled this to work entirely from a Caddyfile, so no custom Docker image needed!
 
 ## Container Information
 
