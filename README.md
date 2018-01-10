@@ -2,8 +2,6 @@
 
 ![grav](https://getgrav-grav.netdna-ssl.com/user/pages/media/grav-logo.svg)
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/seffyroff/grav-caddy-docker.svg)](https://hub.docker.com/r/seffyroff/grav-caddy-docker)
-
 Grav is a Fast, Simple, and Flexible file-based Web-platform. There is Zero installation required. Although Grav follows principles similar to other flat-file CMS platforms, it has a different design philosophy than most.
 
 The underlying architecture of Grav is built using well established and best-in-class technologies. This is to ensure that Grav is simple to use and easy to extend. Some of these key technologies include:
@@ -26,19 +24,14 @@ Two versions of the container exist.  The default image is completely unmodified
 
 ## Container Information
 
-+ yobasystems/alpine-caddy:php image
-+ fork from dsavell/grav Dockerfile
++ abiosoft/caddy:php image
 + Port 2015 Exposed
-+ No Custom Features by default
-+ :admin container available with admin plugin installed
++ Admin installed
 
 ## Usage
 
 ```
-docker create --name=grav \
---restart=always \
-seffyroff/grav-caddy-docker
-docker start grav
+Use the included compose file.
 ```
 
 ## Setting up the application
@@ -50,9 +43,11 @@ Access the webui at `http://<your-ip>:2015`, for more information check out [GRA
 
 ## Issues
 
-+ Pondering rebasing so no dependency on upstream image exists
++ No docker image needed anymore!
 
 ## Changelog
++ **10/01/2018:** Updated to use Caddy image and Caddyfile to install and configure Grav/admin
+	- Caddyfile now pulls Grav from git, installs admin and fixes permissions.
 + **06/08/2017:** Added :admin tag
 	- container configuration with admin interface installed available with :admin tag
 + **05/08/2017:** Initial Fork from dsavell/grav
