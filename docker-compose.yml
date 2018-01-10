@@ -1,17 +1,24 @@
 version: '3.1'
-networks:
-  traefik_webgateway:
-    external:
-      name: traefik_webgateway
+# networks:
+#   traefik_webgateway:
+#     external:
+#       name: traefik_webgateway
 services:
   grav:
-    image: seffyroff/grav-caddy-docker
+    image: abiosoft/caddy:php
+    ports:
+      - 2015:2015
+    volumes:
+      - ./Caddyfile:/etc/Caddyfile
+#      - ./grav-permissions.sh:/root/grav-permissions.sh
+    #pid: "host"
+    
     # build:
     #   context: .
-    networks: 
-      - "traefik_webgateway"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=caddy"
-      - "traefik.frontend.rule=Host:caddy.svd.space"
-      - "traefik.docker.network=traefik_webgateway"
+    # networks: 
+    #   - "traefik_webgateway"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.backend=caddy"
+    #   - "traefik.frontend.rule=Host:caddy.svd.space"
+    #   - "traefik.docker.network=traefik_webgateway"

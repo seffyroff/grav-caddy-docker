@@ -1,10 +1,26 @@
 0.0.0.0
 fastcgi / 127.0.0.1:9000 php
-startup php-fpm7
+on startup php-fpm7
 log stdout
 errors stdout
+tls off
 gzip
-root /var/www
+root src
+git github.com/getgrav/grav {
+    then apk update
+    then apk add php7-simplexml
+    then bin/grav install
+    then bin/gpm install admin -y
+    then sh -c "addgroup web 2> /dev/null"
+    then sh -c "adduser root web"
+    then sh -c "adduser nobody web"
+    then sh -c "chown -R root:web ."
+    then sh -c "find . -type f | xargs chmod 664"
+    then sh -c "find ./bin -type f | xargs chmod 775"
+    then sh -c "find . -type d | xargs chmod 775"
+    then sh -c "find . -type d | xargs chmod +s"
+
+}
 # Begin - Security
 # deny all direct access for these folders
 rewrite {
